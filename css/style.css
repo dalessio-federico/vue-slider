@@ -1,0 +1,130 @@
+/* setup base css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Impostazione body */
+body {
+    font-family: 'Teko', sans-serif;
+    font-size: 16px;
+}    
+/* fine impostazioni body */
+
+/* Impostazioni generiche */
+.flex_coloumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+/* fine impostazioni generiche */
+
+/* impostazione wrapper */
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(32, 33, 46);
+}
+
+.wrapper h1 {
+    font-size: 5em;
+    color: white;
+}
+/* fine impostazioni wrapper */
+
+/* impostazioni slider */
+.slider {
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+}
+
+/* impostazioni frecce scorrimento */
+i {
+    font-size: 40px;
+    color: rgb(231, 231, 231);
+}
+
+.click_prew i {
+    padding-right: 15px;
+    padding-top: 240px;
+}
+.click_next i {
+    padding-left: 15px;
+    padding-top: 240px;
+}
+
+.click_next,
+.click_prew {
+    height: 100%;
+}
+
+.slider .image_folder {
+    position: relative;
+    height: 400px;
+}
+/* fine impostazioni frecce scorrimento*/
+
+/* impostazioni folder immagini */
+.image_folder img {
+    height: 100%;
+}
+/* fine impostazioni folder immagini */
+
+/* Impostazioni information */
+.information {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 50%;
+    width: 100%;
+    overflow-y: scroll;
+}
+.information p {
+    color: white;
+}
+
+/* impostazioni index img */
+.img_index {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -5px;
+    left: 50%;
+    transform: translatex(-50% );
+    height: 45px;
+    width: 260px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.circle {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+/* fine impostazioni index img */
+
+/* fine impostazioni slider */
+
+/* Classi utili per funzioni di interazione */
+
+.img_index div.active {
+    background-color: white;
+}
+
+.first{}
+
+.last{}
+/* fine classi utili */
