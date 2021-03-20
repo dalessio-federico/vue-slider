@@ -10,7 +10,9 @@ var app = new Vue(
                 "img/escape-from-tarkov-beta-cover.webp",
                 "img/VJh2maKk8q2XDTKSUp5aScye.webp",
                 "img/xaOrA7ZIur35LkfIzxtOECFv.webp"
-            ]
+            ],
+            activeCircle : "#circle"
+            
         },
     methods :
         {
@@ -36,6 +38,10 @@ var app = new Vue(
                         {
                             this.indexImages--;
                         };
-                    }
+                    },
+            selectImage : function()
+                        {
+                            this.indexImages = this.image.index;
+                        }
         }
 });

@@ -32,7 +32,11 @@
                 <i class="fas fa-chevron-circle-right"></i>
             </div>
             <div class="img_index flex_row">
-                <div class="circle" :class="(index == indexImages) ? 'active' : null" v-for="(image, index) in images"></div>
+                <div class="circle" 
+                :class="(index == indexImages) ? 'active' : null" 
+                v-for="(image, index) in images" id="cirlce" 
+                @click="indexImages = index">
+                </div>
             </div>
         </div>
     </div>
