@@ -64,6 +64,7 @@ i {
 .click_next,
 .click_prew {
     height: 100%;
+    cursor: pointer;
 }
 
 .slider .image_folder {
@@ -76,6 +77,17 @@ i {
 .image_folder img {
     height: 100%;
 }
+.image_folder:hover 
+.information {
+    display: block;
+    animation-name: animation1;
+    animation-duration: 2s;
+}
+@keyframes animation1 {
+    0% {height: 0%;};
+    50% {height: 50%;};
+    100% {height: 100%;}
+}
 /* fine impostazioni folder immagini */
 
 /* Impostazioni information */
@@ -85,7 +97,7 @@ i {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.63);
-    height: 50%;
+    height: 40%;
     width: 100%;
     overflow-y: scroll;
 }
@@ -107,12 +119,15 @@ i {
     border-radius: 20px;
 }
 
+
+
 .circle {
     display: inline-block;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.555);
+    cursor: pointer;
 }
 /* fine impostazioni index img */
 
@@ -123,8 +138,4 @@ i {
 .img_index div.active {
     background-color: white;
 }
-
-.first{}
-
-.last{}
 /* fine classi utili */

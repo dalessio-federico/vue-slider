@@ -14,19 +14,32 @@
 <body>
     <div class="wrapper flex_coloumn" id="root">
         <h1>Gaming News</h1>
+        
         <div class="slider flex_row">
             <div class="click_prew" @click= "prew">
                 <i class="fas fa-chevron-circle-left"></i>
             </div>
             <div class="image_folder">
                 <img :src="images[indexImages]" alt="">
-                <!-- <div class="information">
-                    <p> 
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, officiis vero iste aut, suscipit voluptas magni labore cum laborum iure error nam vitae quaerat! Quisquam, quos corrupti! Est, natus fuga?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum nam illo? Distinctio sequi provident, sint libero autem possimus expedita quas dolorem nam atque rerum dolor, porro tempore quia blanditiis?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae amet, eligendi nihil, nisi molestiae error illo cum tenetur quaerat optio, placeat ad qui quos consequatur animi voluptatem asperiores quo.
+                <div class="information" >
+                    <p v-if ="indexImages == 0"> Nome: Final Fantasy 7 remake<br>
+                        Genere : Action Rpg<br>
+                        produttore : SquareEnix<br>
                     </p>
-                </div> -->
+                    <p v-else-if = "indexImages == 1"> 
+                        Nome: Escape from Tarkov<br>
+                        Genere : Fps/Survival<br>
+                        produttore : Battle State<br>
+                    </p>
+                    <p v-else-if = "indexImages == 2"> 
+                        Nome: Dragon Quest 12<br>
+                        Genere : Jrpg<br>
+                        produttore : SquareEnix<br>
+                    </p>
+                    <p v-else-if = "indexImages == 3"> 
+                        Konami Ti Odio!
+                    </p>
+                </div>
             </div>
             <div class="click_next" @click="next">
                 <i class="fas fa-chevron-circle-right"></i>

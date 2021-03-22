@@ -11,9 +11,13 @@ var app = new Vue(
                 "img/VJh2maKk8q2XDTKSUp5aScye.webp",
                 "img/xaOrA7ZIur35LkfIzxtOECFv.webp"
             ],
-            activeCircle : "#circle"
-            
         },
+
+    created : function()
+            {
+                document.addEventListener("keydown", this.arrowMoves);
+            },
+
     methods :
         {
             next : function()
@@ -28,6 +32,19 @@ var app = new Vue(
                         };
                     } ,
 
+            arrowMoves : function(e)
+            {
+                switch(e.keyCode)
+                    {
+                        case 37:
+                        this.prew();
+                        break;
+                        case 39 :
+                        this.next();
+                        break;
+                    };
+            },
+
             prew : function()
                     {
                         if (this.indexImages == 0)
@@ -39,9 +56,6 @@ var app = new Vue(
                             this.indexImages--;
                         };
                     },
-            selectImage : function()
-                        {
-                            this.indexImages = this.image.index;
-                        }
-        }
+            
+        },
 });
